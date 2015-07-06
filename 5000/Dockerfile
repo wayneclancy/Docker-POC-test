@@ -22,7 +22,7 @@ RUN /usr/bin/easy_install bottle
 
 # Add Python App
 RUN mkdir -p /opt/bgch-app
-ADD ./app-hello-world.py /opt/bcgh-app/app-hello-world.py
+ADD ./app-hello-world.py /opt/bgch-app/app-hello-world.py
 
 # Create start.sh in / 
 ADD ./start.sh /start.sh
