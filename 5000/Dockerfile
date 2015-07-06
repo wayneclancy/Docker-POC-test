@@ -15,18 +15,19 @@ RUN sudo apt-get -y install python-setuptools python-dev build-essential  wget g
 # Supervisor Config
 RUN /usr/bin/easy_install supervisor
 RUN /usr/bin/easy_install supervisor-stdout
-ADD ./testapp.conf /etc/supervisor/conf.d/testapp.conf
+ADD ./testapp-hello-world.conf /etc/supervisor/conf.d/testapp-hello-world.conf
 
 # Install bottle
 RUN /usr/bin/easy_install bottle
 
 # Add Python App
 RUN mkdir -p /opt/bgch-app
-ADD ./apphello-world.py /opt/bcgh-app/app-hello-world.py
+ADD ./app-hello-world.py /opt/bcgh-app/app-hello-world.py
 
 # Start Supervisord
-ADD ./start.sh /start.sh
-RUN chmod 755 /start.sh
+#ADD ./start.sh /start.sh
+#RUN chmod 755 /start.sh
+RUN supervisor
 
 # Expose Ports
 EXPOSE 5000 
