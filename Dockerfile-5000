@@ -10,7 +10,7 @@ RUN apt-get update
 RUN apt-get -y upgrade
 
 # Basic Requirements
-RUN sudo apt-get -y install nginx python-setuptools python-dev build-essential  wget git
+RUN sudo apt-get -y install python-setuptools python-dev build-essential  wget git
 
 # Supervisor Config
 RUN /usr/bin/easy_install supervisor
