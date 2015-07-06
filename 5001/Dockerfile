@@ -29,6 +29,6 @@ ADD ./start.sh /start.sh
 RUN chmod 700 /start.sh
 
 # Expose Ports
-EXPOSE 5000 
+EXPOSE 5001 
 
 CMD ["/bin/bash", "/start.sh"]
