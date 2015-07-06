@@ -22,7 +22,7 @@ RUN /usr/bin/easy_install bottle
 
 # Add Python App
 RUN mkdir -p /opt/bgch-app
-ADD ./app.py /opt/bcgh-app/app.py
+ADD ./apphello-world.py /opt/bcgh-app/app-hello-world.py
 
 # Start Supervisord
 ADD ./start.sh /start.sh
