@@ -17,6 +17,9 @@ RUN /usr/bin/easy_install supervisor
 RUN /usr/bin/easy_install supervisor-stdout
 ADD ./testapp.conf /etc/supervisor/conf.d/testapp.conf
 
+# Install bottle
+RUN /usr/bin/easy_install bottle
+
 # Add Python App
 RUN mkdir -p /opt/bgch-app
 ADD ./app.py /opt/bcgh-app/app.py
