@@ -24,10 +24,9 @@ RUN /usr/bin/easy_install bottle
 RUN mkdir -p /opt/bgch-app
 ADD ./app-hello-everyone.py /opt/bcgh-app/app-hello-everyone.py
 
-# Start Supervisord
-#ADD ./start.sh /start.sh
-#RUN chmod 755 /start.sh
-RUN service supervisord start
+# Create start.sh in /
+ADD ./start.sh /start.sh
+RUN chmod 700 /start.sh
 
 # Expose Ports
 EXPOSE 5001 
